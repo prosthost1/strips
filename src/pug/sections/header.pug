@@ -1,0 +1,23 @@
+header
+  .wrapper
+    .header-top
+      nav.navbar.navbar-expand-lg.navbar-dark
+        a.logo-link(href="#").col-md-2.col-4
+          img.logo(src="img/logo.png", alt="Логотип компании S trips")
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavAltMarkup' aria-controls='navbarNavAltMarkup' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarNavAltMarkup.collapse.navbar-collapse.col-12.col-lg-10.justify-content-end
+          .navbar-nav.top-menu
+            each item in navMenu
+              a.nav-item(href='#')= item
+    .header-title.text-center
+      h1.title Морские приключения
+      p.title-caption Идейные соображения высшего порядка, а также дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+      .text-center
+        a.butn(href="#") Подробнее
+    .plans-title-block
+      h2.plans-title.text-center выбери свой <br> план путишествия
+      p.plans-title-caption.text-center Наша фирма - лидер на рынке в своей области!
+      .text-center
+        i.fas.fa-angle-double-down
+

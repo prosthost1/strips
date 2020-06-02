@@ -1,0 +1,13 @@
+.offer-item-img.position-relative
+  span.position-absolute.offer-icon-bg
+    img(src= offer.icon, alt="").position-absolute.offer-icon
+  img(src= offer.img, alt= offer.alt)
+figcaption.text-left
+  .offer-main-text
+    h3.offer-item-title= offer.title
+    p.offer-item-description.figure-description= offer.description
+  .d-flex.justify-content-between.align-items-center.pr-3
+    p.offer-price.figure-price= offer.price
+    a.plans-link.position-relative(href="#") заказать
+
+

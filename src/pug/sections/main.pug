@@ -1,0 +1,108 @@
+main
+  section.plans
+    .wrapper
+      .plans-content
+        .container
+          .row.no-gutters.justify-content-between.text-center.text-xl-left
+            .about.col-xl-3.col-12.p-0.mb-5.mb-xl-0
+              h3 О нашей 
+                b компании
+              p.about-description Наша компания предлагает ряд интересно-развлекательных услуг, которые принесут вам ряд впечетлений!
+              a.butn(href="#") Подробнее
+              p.notice * — обратите внимание, смена цены может зависить от курса доллара.
+            .plans-items.col-xl-9.col-12
+              .container.p-0
+                .row.mb-5
+                  each figure in plansFigures
+                    .figure-container.col-lg-4.col-12.mb-3.mb-lg-0
+                      if figure.featured == true
+                        figure.text-center.featured.position-relative
+                          include ../components/figure
+                      else
+                        figure.text-center.position-relative
+                          include ../components/figure
+                .text-center
+                  a(href="#").plans-link.position-relative смотреть все планы 
+      .island.container.px-0
+        .row
+          .island-img.col-12.col-lg-4.p-0.pr-lg-5.mb-4.m-lg-0
+            img.m-auto.m-lg-0(src="img/island.jpg", alt="Безлюдний остров посреди моря на фоне чистого, ясного неба")
+          .island-text.col-12.col-lg-8.p-0
+            h2.island-title.text-center.text-lg-left Удивительный безлюдный остров, который сводит людей с ума
+            .island-main.d-flex.justify-content-between.px-4.px-lg-0
+              .island-content.d-inline-block
+                p.island-description Многие блоги посвящены одной теме. Другие более персональные и разносторонние. Во многих блогах есть возможность оставлять посетителями комментарии. Всю информацию в блог добавляют авторы, которых может быть несколько.
+                .d-flex.flex-wrap
+                  a(href="#").butn.island-butn.mr-2.mb-3.mb-lg-0 заказать тур
+                  a(href="#").blue-butn.island-butn.mb-3.mb-lg-0 подробности
+              .island-price.text-center.d-inline-block
+                p.island-price-number 1275 руб./день
+                p.island-price-caption В данную стоимость входит обслуживание персонала, ужин и захватывающие истории гида.
+  section.review
+    .wrapper.container.p-0
+      .row
+        .review-content.col-12.col-lg-6.mb-5.mb-lg.pl-lg-0
+          h2.review-title.text-uppercase поймай волну — 
+            b живи ярко!
+          p.review-description Не бойтесь экспериментировать с конструктором, богатый выбор шаблонов и альтернативные варианты стилизации виджетов помогут вам подобрать индивидуальный характер вашего сайта. Вы можете менять цвет,стиль текста и даже поставить ссылку.
+          a(href="#").butn.review-butn участвовать
+        .review-main-block.col-12.col-lg-6.d-flex.align-items-center.justify-content-center.pr-lg-0
+          .review-main.position-relative.text-center
+            img.quotation.position-absolute(src="img/svg/quote.svg", alt="SVG изображение кавычек желтого цвета")
+            p.review-quote Не переусердствуйте с отзывами. Их не должно быть слишком много. Лучше всего, если будет три-четыре, но развернутых. С описанием того, что человеку понравилось.
+            p.quote-author 
+              b.quote-author-caption.d-block  Олег Набережный
+              | довольный клиент
+            img.quote-author-img.position-absolute(src="img/costumer.png", alt="Фотография довольного клиента компании S-Trpis")
+  section.offers
+    .wrapper.text-center
+      h2.offers-title Специальные предложения недели
+      p.offers-title-caption  Люди могут обещать тебе золотые горы, но это ничего не значит.
+      .container-fluid.px-0
+        .row
+          each offer in offerFigures
+            .offer-item-container.justify-content-center.d-flex.col-xl-3.col-md-6.col-12
+              if offer.featured == true
+                figure.offer-item.text-center.featured.position-relative
+                  include ../components/offer
+              else
+                figure.offer-item.text-center.position-relative
+                  include ../components/offer
+  section.others
+    .wrapper
+      .container-fluid.px-0
+        .row
+          .col-xl-3.col-12.text-center.text-xl-left.mb-5.mb-xl-0
+            .others-title
+              h2 Прочие 
+                b  документы
+              p Если у вас очень много предложений, то разместите тут самые основные, а полный Прайс лучше сделать файлом для скачивания.
+          each document in documents
+            .col-xl-3.col-12.col-md-6
+              .document.others-item.mx-auto(class= document.bg)
+                .doc-title.position-relative
+                  i.far.fa-file
+                  h3= document.title
+                  p.doc-size.caption-text.mb-3= "Размер файла:" + document.fileSize
+                .doc-main
+                  p.doc-desc.caption-text.mb-4= document.description
+                  a.doc-download.d-inline-flex.align-items-middle(href="#" download)
+                    span.mr-2.material-icons filter_drama
+                    | скачать
+          .col-xl-3.col-12
+            .advisor.text-center.position-relative.others-item.mx-auto
+              p.position-absolute.advisor-title.m-0 задать вопрос
+              .advisor-desc.caption-text.mb-3 Чтоб поместить на сайт чьи-то слова, отзывы клиентов, слоган вашей компании или просто как способ оформления текста.
+              a(href="tel:+79531234567").d-block.advisor-phone + 7 (953) 123-45-67
+              p.advisor-name.mb-0
+                b Анна Николаева 
+                br
+                | консультант
+              img.advisor-photo.position-absolute(src="img/advisor.png", alt="Фото консультанта")
+
+                
+          
+
+
+
+

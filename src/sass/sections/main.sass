@@ -1,0 +1,331 @@
+.plans-title
+  margin: 0 0 1.25rem
+  +text($exo2, 2.25rem, $regular, #000)
+  letter-spacing: 1px
+  text-transform: uppercase
+  line-height: 2.75rem
+.plans-title-caption
+  margin: 0 0 2rem
+  +text($ptsans, 1rem, $regular, #000)
+  font-style: italic
+.fa-angle-double-down
+  font-size: 2.25rem
+.figure-container
+  padding: 0 10px
+.plans-content
+  padding: 4.5rem 0 rem(60)
+  border-bottom: 1px solid #dfe3e6
+  figure
+    padding: 30px 22px 25px 
+    &:hover
+      background-color: #fff
+  .figure-price
+    margin: 0 0 10px
+figure.featured:before
+  content: ''
+  position: absolute
+  width: 60px
+  height: 60px
+  left: -2px
+  top: -1px
+  background-image: url(../img/svg/featured.svg)
+  z-index: 10
+.figure-link
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+.figure-title
+  margin: 0 0 8px
+  +text($exo2, rem(18), $medium, #000)
+.figure-price
+  +text($exo2, rem(24), $regular, #0099ff)
+.figure-description
+  margin: 0 auto
+  +text($ptsans, rem(13), $regular, #666)
+  overflow-y: scroll
+.figure-icon
+  margin-bottom: 14px
+  span
+    font-size: 3.75rem
+    color: #ffb700;
+.about
+  display: inline-block
+  h3
+    margin: 0 0 1.25rem
+    text-transform: uppercase
+    letter-spacing: 1px;
+    line-height: 2.5rem
+    +text($exo2, 2.25rem, $bold, #000)
+    b
+      font-weight: $bold
+      color: #0099ff
+  a
+    margin: 0 0 1.25rem
+  .notice
+    +text($ptsans, 0.8125rem, $regular, #a6a6a6)
+    line-height: 1.1875rem
+.about-description
+  margin: 0 0 25px
+  +text($ptsans, 1rem, $regular, #666)
+  line-height: 1.375rem
+  font-style: italic
+.plans-link
+  +text($exo2, rem(12), $bold, #0099ff)
+  text-transform: uppercase
+  &:hover
+    text-decoration: underline
+    color: #0099ff
+  &:before
+    content: ''
+    position: absolute
+    width: 13px
+    height: 14px
+    background-image: url(../img/svg/chevron.svg)
+    right: -20px
+    top: 0
+.island
+  padding: rem(80) 0
+.island-img
+  overflow: hidden
+  img
+    display: block
+    max-width: 100%
+    height: 100%
+.island-title
+  margin: 0 0 rem(20)
+  +text($exo2, rem(36), $regular, #000)
+  line-height: rem(42)
+.island-content
+  max-width: 58%
+.island-description
+  margin: 0 0 rem(30)
+  +text($ptsans, rem(15), $regular, #000)
+  line-height: rem(26)
+.island-butn.butn
+  padding: .7rem 1.7rem
+.blue-butn
+  padding: .77rem 1.7rem
+  text-transform: uppercase
+  letter-spacing: 1px
+  +text($exo2, 1rem, $bold, #0099ff)
+  background-color: #fff
+  border: 2px solid #0099ff
+  border-radius: 23px;
+  &:hover
+    color: #fff
+    background-color: #0099ff
+.island-price
+  max-width: 36%
+  padding: rem(30)
+  background-color: #edf2f5
+.island-price-number
+  +text($exo2, rem(30), $regular, #0099ff)
+.island-price-caption
+  +text($ptsans, rem(14), $regular, #808080)
+  font-style: italic
+.review
+  padding: 85px 0 100px
+  background: #0099ff url(../img/feedbackbg.jpg) 90% 0
+  background-size: cover
+.review-title
+  margin: 0 0 rem(20)
+  letter-spacing: 2px
+  line-height: rem(66)
+  +text($exo2, rem(56), $bold, #fff)
+  b
+    color: #0099ff
+.review-description
+  margin: 0 0 rem(25)
+  line-height: rem(30)
+  +text($ptsans, 1rem, $regular, #fff)
+.review-butn
+  padding: .7rem 1.7rem
+.review-main-block
+  padding: 40px 15px
+$reviewBorder: 4px solid rgba(255, 255, 255, 0.1)
+.review-main
+  max-width: rem(560)
+  padding: 0 rem(40)
+  &::before, &::after
+    content: ''
+    position: absolute
+    width: 35%
+    height: rem(228)
+    top: rem(-45)
+  &::before
+    left: 0
+    @each $border in "border-left", "border-bottom", "border-top"
+      #{$border}: $reviewBorder 
+  &::after
+    right: 0
+    @each $border in "border-right", "border-bottom", "border-top"
+      #{$border}: $reviewBorder 
+.review-quote
+  max-height: rem(75)
+  margin: 0 0 rem(18)
+  +text($ptsans, rem(17), $regular, #fff)
+  font-style: italic
+  line-height: rem(25)
+  overflow-y: scroll
+.quote-author 
+  line-height: rem(26)
+  +text($ptsans, rem(14), $regular, rgba(255, 255, 255, 0.5))
+  b
+    +text($exo2, rem(18) + rem, $medium, #fff)
+.quote-author-img, .quotation
+  left: 50%
+  transform: translate(-50%)
+.quotation
+  top: rem(-55)
+  width: rem(42)
+  height: rem(37)
+.quote-author-img
+  bottom: rem(-75)
+  width: rem(86)
+  height: rem(86)
+.offers
+  padding: rem(75) 0 rem(90)
+.offer-item
+  max-width: 270px
+  &:hover
+    background-color: #fff
+    .offer-icon-bg
+      opacity: 1
+  figcaption
+    padding: 15px 18px
+  .offer-main-text
+    margin: 0 0 10px
+    height: rem(88)
+    overflow-y: scroll
+  .offer-price
+    margin-bottom: 0
+  a
+    color: #ffb700
+    &:before
+      top: 1px
+      background-image: url(../img/svg/chevron-yellow.svg)
+    &:hover
+      color: #ffb700
+.offer-icon-bg
+  width: 22%
+  height: 100%
+  background-color: #0099ff
+  opacity: 0
+  img
+    top: 50%
+    left: 0
+    transform: translateY(-50%) scale(0.8)
+.offers-title
+  margin: 0 0 10px
+  +text($exo2, rem(36), $regular, #000)
+.offers-title-caption
+  margin: 0 0 35px
+  +text($ptsans, 1rem, $regular, #808080)
+  font-style: italic
+.offer-item-title
+  +text($exo2, rem(18), $semiBold, #000)
+.others
+  padding: rem(80) 0
+.others-item
+  max-width: 270px
+  margin-bottom: 30px
+.others-title
+  h2
+    margin: 0 0 rem(20)
+    text-transform: uppercase
+    +text($exo2, rem(36), $bold, #000)
+    letter-spacing: 1px
+    line-height: rem(40)
+    b
+      color: #0099ff
+      font-weight: $bold
+  p
+    +text($ptsans, rem(16), $regular,#666)
+    font-style: italic
+.house
+  background-image: url(../img/house.png)
+.city-view
+  background-image: url(../img/city-view.png)
+.document
+  padding: 20px 0 30px
+  background-size: cover
+.doc-title
+  padding-left: rem(70)
+  i
+    color: #ffb700
+    font-size: rem(50)
+    transform: scale(0.9, 0.9)
+    position: absolute
+    left: rem(25)
+    top: 0
+  h3
+    +text($exo2, rem(18), $medium)
+    line-height: rem(24)
+.doc-size
+  opacity: 0.6
+.caption-text
+  +text($ptsans, rem(13), $regular)
+.doc-main
+  padding: 0 rem(25)
+  line-height: rem(19)
+.doc-download
+  padding: rem(8) rem(15)
+  +text($exo2, rem(12), $bold, #ffb700)
+  text-transform: uppercase
+  border: 2px solid #ffb700
+  border-radius: 16px;
+  span
+    display: inline-block
+    color: #ffb700
+    font-size: rem(14)
+  &:hover
+    background-color: #ffb700
+    color: #fff
+    span
+      color: #fff
+$advisorBorder: 4px solid #ffb700
+.advisor
+  padding: rem(30) rem(25) rem(60)
+  &::before, &::after
+    content: ''
+    position: absolute
+    top: 0
+    height: 100%
+    width: rem(45)
+  &::before
+    left: 0
+    @each $border in "border-left", "border-bottom", "border-top"
+      #{$border}: $advisorBorder 
+  &::after
+    right: 0
+    @each $border in "border-right", "border-bottom", "border-top"
+      #{$border}: $advisorBorder
+.advisor-title
+  top: -8px
+  left: 50%
+  width: 100%
+  transform: translateX(-50%)
+  +text($exo2, rem(18), $bold, #000)
+  text-transform: uppercase
+.advisor-desc
+  color: rgba(0, 0, 0, 0.6)
+  line-height: rem(19)
+.advisor-phone
+  margin: 0 0 20px
+  +text($exo2, rem(18), $bold, #0099ff)
+.advisor-name  
+  +text($exo2, rem(14), $regular, rgba(0, 0, 0, 0.5))
+  line-height: rem(19)
+  b
+    font-size: rem(18)
+    color: #000
+    font-weight: $medium
+.advisor-photo
+  left: 50%
+  transform: translateX(-50%)
+  bottom: rem(-40)
+  width: rem(86)
+  height: rem(86)
+    
